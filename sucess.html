@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка отправлена - Вдохни Алтай</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#355E3B', secondary: '#E6D4B9' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333333;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(53, 94, 59, 0.8), rgba(53, 94, 59, 0.4)), url('https://altaitg.ru/upload/iblock/f7f/f7fa753abc1cfccf185ba3f375035971.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="bg-white fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <span class="text-primary text-2xl font-['Pacifico']">Вдохни Алтай</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <nav class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 font-medium">Главная</a>
+                    <a href="rooms.html" class="text-gray-700 font-medium">Номера и цены</a>
+                    <a href="gallery.html" class="text-gray-700 font-medium">Галерея</a>
+                    <a href="about.html" class="text-gray-700 font-medium">О нас</a>
+                    <a href="contacts.html" class="text-gray-700 font-medium">Контакты</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+79236613707" class="flex items-center text-gray-700">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <span>+7 923 661-37-07</span>
+                    </a>
+                    <a href="index.html#booking" class="bg-primary text-white px-4 py-2">Забронировать</a>
+                </div>
+            </div>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Главный экран -->
+    <section class="hero-section pt-24 min-h-[400px] flex items-center">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl md:text-6xl mb-6">Спасибо за вашу заявку!</h1>
+                <p class="text-xl mb-8">Мы свяжемся с вами в ближайшее время для подтверждения бронирования.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Блок подтверждения -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="w-24 h-24 bg-primary bg-opacity-10 flex items-center justify-center mx-auto mb-6">
+                    <i class="ri-checkbox-circle-line ri-3x text-primary"></i>
+                </div>
+                <h2 class="text-3xl mb-4">Ваша заявка успешно отправлена</h2>
+                <p class="text-lg text-gray-600 mb-8">Наш менеджер свяжемся с вами в течение 1 часа для уточнения
+                    деталей. Если вам нужна срочная помощь, позвоните нам по телефону <a href="tel:+79236613707"
+                        class="text-primary font-medium">+7 923 661-37-07</a>.</p>
+                <div class="bg-secondary bg-opacity-30 p-6 mb-8 text-left">
+                    <h3 class="text-xl mb-4">Что дальше?</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 mr-3 mt-1">
+                                <i class="ri-phone-line text-primary"></i>
+                            </div>
+                            <span>Ожидайте звонка от нашего менеджера для подтверждения заявки</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 mr-3 mt-1">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <span>Проверьте вашу электронную почту - мы отправили копию заявки</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center bg-primary bg-opacity-10 mr-3 mt-1">
+                                <i class="ri-credit-card-line text-primary"></i>
+                            </div>
+                            <span>Для подтверждения бронирования потребуется предоплата 20% от стоимости</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="index.html" class="inline-block bg-primary text-white px-8 py-3">На главную</a>
+                    <a href="rooms.html"
+                        class="inline-block bg-white text-primary border border-primary px-8 py-3">Посмотреть номера</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Подвал -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <span class="text-white text-2xl font-['Pacifico']">Вдохни Алтай</span>
+                    </a>
+                    <p class="mb-4">Уютный мини-отель в сердце Горного Алтая, где вы сможете насладиться красотой
+                        природы и отдохнуть от городской суеты.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-vk-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white">Главная</a></li>
+                        <li><a href="rooms.html" class="text-white">Номера и цены</a></li>
+                        <li><a href="gallery.html" class="text-white">Галерея</a></li>
+                        <li><a href="about.html" class="text-white">О нас</a></li>
+                        <li><a href="contacts.html" class="text-white">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4">Контакты</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Республика Алтай, Чемальский район, с. Узнезя, ул. Набережная, 52</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span>+7 923 661-37-07</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="d2a4b6bdbabcbbb3bea6b3ab92bfb3bbbefca0a7">[vdohnialtay@yandex.ru]</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-sm text-white">
+                <p>© 2025 Розов Владислав. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>

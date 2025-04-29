@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вдохни Алтай - Мини-отель в сердце Алтая</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F5D37',
+                        secondary: '#D4B98C'
+                    },
+                    borderRadius: {
+                        'lg': '1rem',
+                        'xl': '1.5rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333333;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2F5D37;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(47, 93, 55, 0.8), rgba(47, 93, 55, 0.4)), url('https://vdohnialtay.ru/wp-content/uploads/2023/05/photo_2023-05-16_14-44-53.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .custom-checkbox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 2px solid #2F5D37;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .custom-checkbox input:checked~.checkmark:after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #2F5D37;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="flex items-center">
+                <span class="text-primary text-2xl font-['Pacifico']">Вдохни Алтай</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <nav class="flex items-center space-x-6">
+                    <a href="#" class="text-primary font-medium hover:text-primary">Главная</a>
+                    <a href="rooms.html" class="text-gray-700 font-medium hover:text-primary">Номера и цены</a>
+                    <a href="#services" class="text-gray-700 font-medium hover:text-primary">Услуги</a>
+                    <a href="#gallery" class="text-gray-700 font-medium hover:text-primary">Галерея</a>
+                    <a href="#about" class="text-gray-700 font-medium hover:text-primary">О нас</a>
+                    <a href="#contacts" class="text-gray-700 font-medium hover:text-primary">Контакты</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+79236613707" class="flex items-center text-gray-700 hover:text-primary">
+                        <div class="w-5 h-5 flex items-center justify-center mr-2">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <span>+7 923 661-37-07</span>
+                    </a>
+                    <a href="#booking"
+                        class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary hover:bg-opacity-90">Забронировать</a>
+                </div>
+            </div>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+    </header>
+    <!-- Главный экран -->
+    <section class="hero-section pt-24 min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Мини-отель в сердце Алтая</h1>
+                <p class="text-xl mb-8">Уютный отдых в окружении величественной природы Горного Алтая. Почувствуйте
+                    гармонию с природой и насладитесь комфортом.</p>
+                <a href="#booking"
+                    class="inline-block bg-white text-primary px-8 py-3 rounded-xl font-medium hover:bg-opacity-90">Забронировать
+                    номер</a>
+            </div>
+        </div>
+    </section>
+    <!-- Блок преимуществ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-secondary bg-opacity-30 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-hotel-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Уютные номера</h3>
+                    <p>Комфортабельные номера с современной мебелью и всем необходимым для отдыха.</p>
+                </div>
+                <div class="bg-secondary bg-opacity-30 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-map-pin-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Идеальное расположение</h3>
+                    <p>Отель находится в живописном месте с видом на горы и легким доступом к природным
+                        достопримечательностям.</p>
+                </div>
+                <div class="bg-secondary bg-opacity-30 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-restaurant-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Домашняя кухня</h3>
+                    <p>Вкусные завтраки и ужины из свежих местных продуктов, приготовленные с любовью.</p>
+                </div>
+                <div class="bg-secondary bg-opacity-30 p-8 rounded-xl shadow-md">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-route-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Экскурсии и активности</h3>
+                    <p>Организация увлекательных экскурсий по самым красивым местам Горного Алтая.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Блок услуг -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Наши услуги</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Мы предлагаем широкий спектр услуг для вашего комфортного
+                    отдыха в Горном Алтае.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://altaitg.ru/upload/iblock/30f/30fb850e42d2cd112c555725276e44f2.jpg" alt="Баня"
+                            class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Баня на дровах</h3>
+                    <p class="text-gray-600 mb-4">Расслабьтесь в нашей традиционной бане на дровах с видом на горы.</p>
+                    <span class="text-primary font-semibold">от 2000 ₽/час</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://altaitg.ru/upload/iblock/973/973542a832f701c62047259047ad02d1.jpg"
+                            alt="Сплав по Катуни" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Сплав по Катуни</h3>
+                    <p class="text-gray-600 mb-4">Испытайте адреналин и насладитесь красотой реки Катунь.</p>
+                    <span class="text-primary font-semibold">от 3500 ₽/чел</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="h-48 overflow-hidden rounded-lg mb-4">
+                        <img src="https://altaitg.ru/upload/iblock/a20/a20116875540ccb0cf128c13e5cab5a3.jpg"
+                            alt="Конные прогулки" class="w-full h-full object-cover object-top">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Конные прогулки</h3>
+                    <p class="text-gray-600 mb-4">Исследуйте живописные тропы Алтая верхом на лошади.</p>
+                    <span class="text-primary font-semibold">от 2500 ₽/час</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Блок "О нас" -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">О нашем мини-отеле</h2>
+                    <p class="mb-4">Мини-отель «Вдохни Алтай» — это уютное место для отдыха в Горном Алтае,
+                        расположенное в живописном месте с видом на горы и реку Катунь.</p>
+                    <p class="mb-4">Наш отель предлагает комфортабельные номера, домашнюю кухню и дружелюбную атмосферу.
+                        Мы стремимся создать для наших гостей идеальные условия для отдыха и знакомства с удивительной
+                        природой Алтая.</p>
+                    <p class="mb-6">Здесь вы сможете насладиться тишиной и спокойствием, вдохнуть чистейший горный
+                        воздух и отдохнуть от городской суеты.</p>
+                    <a href="#"
+                        class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary hover:bg-opacity-90">Подробнее</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://altaitg.ru/upload/resize_cache/iblock/30f/800_500_1/30fb850e42d2cd112c555725276e44f2.jpg"
+                        alt="Мини-отель Вдохни Алтай" class="w-full h-auto object-cover rounded-xl shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Блок популярных номеров -->
+    <section id="rooms" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Наши номера</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Выберите номер, который подойдет именно вам. Все номера
+                    оборудованы всем необходимым для комфортного отдыха.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://altaitg.ru/upload/resize_cache/iblock/f7f/634_476_2/f7fa753abc1cfccf185ba3f375035971.jpg"
+                            alt="Стандартный номер"
+                            class="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Стандартный номер</h3>
+                        <p class="text-gray-600 mb-4">Уютный номер с двуспальной кроватью, телевизором, холодильником и
+                            собственной ванной комнатой.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary text-xl font-semibold">от 3500 ₽/сутки</span>
+                            <a href="rooms.html" class="text-primary font-medium hover:underline">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://seven.travel/upload/iblock/730/g94rt25df527u9x00lhm397au28wfmf1.jpg"
+                            alt="Комфорт номер"
+                            class="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Комфорт номер</h3>
+                        <p class="text-gray-600 mb-4">Просторный номер с большой кроватью, телевизором, холодильником,
+                            чайником и ванной комнатой.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary text-xl font-semibold">от 4500 ₽/сутки</span>
+                            <a href="rooms.html" class="text-primary font-medium hover:underline">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://seven.travel/upload/iblock/965/pltsj3869cju84atxaki8zmusquzc2y2.jpg"
+                            alt="Люкс номер"
+                            class="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Люкс номер</h3>
+                        <p class="text-gray-600 mb-4">Роскошный номер с гостиной зоной, спальней, мини-кухней,
+                            телевизором и просторной ванной комнатой.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary text-xl font-semibold">от 6000 ₽/сутки</span>
+                            <a href="rooms.html" class="text-primary font-medium hover:underline">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="rooms.html"
+                    class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary hover:bg-opacity-90">Смотреть
+                    все номера</a>
+            </div>
+        </div>
+    </section>
+    <!-- Галерея -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Галерея</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Посмотрите, как выглядит наш мини-отель и окружающая природа
+                    Горного Алтая.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/f7f/f7fa753abc1cfccf185ba3f375035971.jpg"
+                        alt="Природа Алтая"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/aa0/aa0479efb9136dbad8f17df30778c080.jpg"
+                        alt="Отель снаружи"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/e0e/e0e524aec60405a622cbbfcba2230f88.jpg"
+                        alt="Холл отеля"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/30f/30fb850e42d2cd112c555725276e44f2.jpg" alt="Баня"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/45d/45de4bd163151f5dcb32cf0d71321b00.jpg" alt="Ресторан"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/973/973542a832f701c62047259047ad02d1.jpg"
+                        alt="Сплав по Катуни"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/a20/a20116875540ccb0cf128c13e5cab5a3.jpg"
+                        alt="Конные прогулки"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://altaitg.ru/upload/iblock/1c8/1c8c951cd26b4565e272302da68cb135.jpg"
+                        alt="Река Катунь"
+                        class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#"
+                    class="inline-block bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary hover:bg-opacity-90">Смотреть
+                    все фото</a>
+            </div>
+        </div>
+    </section>
+    <!-- Блок бронирования -->
+    <section id="booking" class="py-16 bg-primary bg-opacity-10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Забронировать номер</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Заполните форму ниже, и мы свяжемся с вами для подтверждения
+                    бронирования.</p>
+            </div>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Имя и фамилия</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="Иван Иванов">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                placeholder="example@mail.ru">
+                        </div>
+                        <div>
+                            <label for="room" class="block text-gray-700 font-medium mb-2">Тип номера</label>
+                            <div class="relative">
+                                <select id="room"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg appearance-none pr-8">
+                                    <option value="">Выберите тип номера</option>
+                                    <option value="standard">Стандартный</option>
+                                    <option value="comfort">Комфорт</option>
+                                    <option value="lux">Люкс</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="arrival" class="block text-gray-700 font-medium mb-2">Дата заезда</label>
+                            <input type="date" id="arrival" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="departure" class="block text-gray-700 font-medium mb-2">Дата выезда</label>
+                            <input type="date" id="departure"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="guests" class="block text-gray-700 font-medium mb-2">Количество гостей</label>
+                            <input type="number" id="guests" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                                min="1" max="10" value="2">
+                        </div>
+                        <div>
+                            <label for="children" class="block text-gray-700 font-medium mb-2">Дети до 7 лет</label>
+                            <input type="number" id="children"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg" min="0" max="5" value="0">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Дополнительные
+                            пожелания</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                            placeholder="Укажите ваши пожелания или вопросы..."></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label class="custom-checkbox flex items-start">
+                            <input type="checkbox" class="hidden">
+                            <span class="checkmark mr-3 mt-1"></span>
+                            <span class="text-gray-700">Я согласен на обработку персональных данных и принимаю условия
+                                <a href="#" class="text-primary hover:underline">пользовательского соглашения</a></span>
+                        </label>
+                    </div>
+                    <a href="sucess.html"
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary hover:bg-opacity-90">Отправить
+                            заявку</button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Блок контактов -->
+    <footer id="contacts" class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="inline-block mb-4">
+                        <span class="text-white text-2xl font-['Pacifico']">Вдохни Алтай</span>
+                    </a>
+                    <p class="mb-4">Уютный мини-отель в сердце Горного Алтая, где вы сможете насладиться красотой
+                        природы и отдохнуть от городской суеты.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full hover:bg-opacity-30">
+                            <i class="ri-vk-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full hover:bg-opacity-30">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full hover:bg-opacity-30">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20 rounded-full hover:bg-opacity-30">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-white hover:text-secondary">Главная</a></li>
+                        <li><a href="rooms.html" class="text-white hover:text-secondary">Номера и цены</a></li>
+                        <li><a href="#services" class="text-white hover:text-secondary">Услуги</a></li>
+                        <li><a href="#gallery" class="text-white hover:text-secondary">Галерея</a></li>
+                        <li><a href="#about" class="text-white hover:text-secondary">О нас</a></li>
+                        <li><a href="#contacts" class="text-white hover:text-secondary">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Услуги</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-white hover:text-secondary">Баня на дровах</a></li>
+                        <li><a href="#services" class="text-white hover:text-secondary">Сплав по Катуни</a></li>
+                        <li><a href="#services" class="text-white hover:text-secondary">Конные прогулки</a></li>
+                        <li><a href="#services" class="text-white hover:text-secondary">Экскурсии</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Контакты</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Республика Алтай, Чемальский район, с. Узнезя, ул. Набережная, 52</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span>+7 923 661-37-07</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="c5b3a1aaa3a5a2aaa7bfaab285a8a4acabe9b5b2">[vdohnialtay@yandex.com]</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 pt-8 text-center text-sm text-white">
+                <p>© 2025 Розов Владислав. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
+            checkboxes.forEach((checkbox) => {
+                checkbox.addEventListener("change", function () {
+                    const checkmark = this.nextElementSibling;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

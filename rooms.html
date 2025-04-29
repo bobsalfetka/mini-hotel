@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номера и цены - Вдохни Алтай</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#355E3B',
+                        secondary: '#E6D4B9'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333333;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(53, 94, 59, 0.8), rgba(53, 94, 59, 0.4)), url('https://vdohnialtay.ru/wp-content/uploads/2023/05/photo_2023-05-16_14-44-53.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl">Вдохни Алтай</div>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-700">Главная</a></li>
+                    <li><a href="rooms.html" class="text-gray-700 font-bold">Номера и цены</a></li>
+                    <li><a href="gallery.html" class="text-gray-700">Галерея</a></li>
+                    <li><a href="about.html" class="text-gray-700">О нас</a></li>
+                    <li><a href="contacts.html" class="text-gray-700">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <section id="rooms" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl mb-8 text-center">Номера и цены</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6">
+                        <h3 class="text-2xl mb-4">Тёплый сафари-тент</h3>
+                        <p><strong>Вместимость:</strong> 4 (2 взрослых, 2 детей)</p>
+                        <p><strong>Цена:</strong> 12,100 р. / 9,680 р. (регулярная/скидка)</p>
+                        <p><strong>Площадь:</strong> 48 кв.м.</p>
+                        <p><strong>Кровати:</strong> Кровать king-size, кушетка, дополнительная кровать или колыбель по
+                            запросу</p>
+                        <p><strong>Интернет:</strong> Wi-Fi, быстрый, 2 провайдера</p>
+                        <p><strong>Особенности:</strong> Отопление, тёплые полы, зимняя утеплённая модель, отдельный
+                            тёплый санузел, летняя кухня, столовая, терраса</p>
+                        <p><strong>Дополнительная информация:</strong> Бесплатно для детей до 11 лет на имеющихся
+                            кроватях, колыбели доступны, терраса с креслами и пледами</p>
+                    </div>
+                    <div class="bg-white p-6">
+                        <h3 class="text-2xl mb-4">Семейные апартаменты с двумя спальнями</h3>
+                        <p><strong>Вместимость:</strong> 5</p>
+                        <p><strong>Цена:</strong> 18,250 р. / 14,600 р. (регулярная/скидка)</p>
+                        <p><strong>Площадь:</strong> 41 кв.м.</p>
+                        <p><strong>Кровати:</strong> Кровать king-size, 2 одинарные кровати, колыбель по запросу</p>
+                        <p><strong>Интернет:</strong> Wi-Fi, быстрый, 2 провайдера</p>
+                        <p><strong>Особенности:</strong> 2 спальни, кухня-гостиная, отопление, отдельный санузел, полная
+                            кухня, столовая, веранда</p>
+                        <p><strong>Дополнительная информация:</strong> Включает посудомоечную машину, микроволновку,
+                            чайник, газовую плиту, холодильник, стиральную машину, 2 телевизора, бесплатно для детей до
+                            11 лет на имеющихся кроватях</p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-2xl mb-4">Раннее бронирование</h3>
+                    <p>- 20% скидка на май (забронировать до 30 апреля)</p>
+                    <p>- 10% скидка на июнь (забронировать до 31 мая)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <span class="text-white text-2xl font-['Pacifico']">Вдохни Алтай</span>
+                    </a>
+                    <p class="mb-4">Уютный мини-отель в сердце Горного Алтая, где вы сможете насладиться красотой
+                        природы и отдохнуть от городской суеты.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-vk-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white bg-opacity-20">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4">Навигация</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-white">Главная</a></li>
+                        <li><a href="rooms.html" class="text-white">Номера и цены</a></li>
+                        <li><a href="gallery.html" class="text-white">Галерея</a></li>
+                        <li><a href="about.html" class="text-white">О нас</a></li>
+                        <li><a href="contacts.html" class="text-white">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg mb-4">Контакты</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span>Республика Алтай, Узнезя, Береговая улица, 5км</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span>+7 (913) 995-74-95, 8 (800) 333-68-08</span>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="1a6c7e75727473347b766e7b635a637b747e7f6234686f">[vdohnialtay@yandex.ru]</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-sm text-white">
+                <p>© 2025 Розов Владислав. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+
+</html>
